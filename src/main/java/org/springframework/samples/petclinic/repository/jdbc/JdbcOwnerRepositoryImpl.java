@@ -136,7 +136,7 @@ public class JdbcOwnerRepositoryImpl implements OwnerRepository {
         } else {
             this.namedParameterJdbcTemplate.update(
                 "UPDATE owners SET first_name=:firstName, last_name=:lastName, address=:address, " +
-                    "city=:city, telephone=:telephone WHERE id=:id",
+                    "city=:city, telephone=:telephone, active=:active WHERE id=:id",
                 parameterSource);
         }
     }
